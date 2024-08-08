@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        function redirect() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.paynow.infiniti";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/ke/app/infinitipay/id6448620674";
+            } else if (/huawei/i.test(userAgent)) {
+                window.location.href = "https://appgallery.huawei.com/app/C107642113";
+            } else {
+                window.location.href = "https://yourfallbackurl.com";  // optional fallback URL
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+    <p>Redirecting...</p>
+</body>
+</html>
